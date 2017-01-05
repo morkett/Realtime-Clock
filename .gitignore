@@ -63,3 +63,7 @@ Thumbs.db
 # Ignore the Node Modules folder
 /node_modules
 /phantomas 
+
+
+#Ignore these directories
+/PSD
