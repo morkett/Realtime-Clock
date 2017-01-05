@@ -19,6 +19,10 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
+
+  @media only screen and (max-width: 500px) {
+    overflow: scroll;
+  }
 }
 
 .clock {
