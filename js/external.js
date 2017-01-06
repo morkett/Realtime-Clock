@@ -1,19 +1,33 @@
 
 function moveHands() {
     with(new Date()) {
-        h = 30 * (getHours() % 12 + getMinutes() / 60); // 30 degrees hour
-        m = 6 * getMinutes(); // 6 degrees every minute
-        s = 6 * getSeconds(); // 6 degrees every second
-        // setting the rotate CSS attribute to those degree values -->
-        document.getElementById('seconds').style.cssText = "transform:rotate(" + s + "deg);";
-        document.getElementById('minutes').style.cssText = "transform:rotate(" + m + "deg);";
-        document.getElementById('hours').style.cssText = "transform:rotate(" + h + "deg);";
+        h = 30 * (getHours() % 12 + getMinutes() / 60);
+        m = 6 * getMinutes();
+        s = 6 * getSeconds();
 
-        setTimeout(moveHands, 1000); // calling the function every second
+        document.getElementById('js-seconds').style.cssText = "transform:rotate(" + s + "deg);";
+        document.getElementById('js-minutes').style.cssText = "transform:rotate(" + m + "deg);";
+        document.getElementById('js-hours').style.cssText = "transform:rotate(" + h + "deg);";
+
+        setTimeout(moveHands, 1000);
 
     }
 }
 
 
 
-window.onload = moveHands; // making sure the function starts on load of webpage
+window.onload = moveHands;
+
+
+$(document).ready(function() {
+  $(".icon-volume-high").click(function(){
+    $(this).css("display", "none");
+    $(audio).muted = true;
+    $(".icon-volume-mute").css("display", "block");
+});
+
+$(".icon-volume-mute").click(function(){
+  $(this).css("display", "none");
+  $(".icon-volume-high").css("display", "block");
+});
+});
