@@ -2,6 +2,10 @@
 @import "config";
 @import "mixins";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -31,7 +35,8 @@ body {
   background-size: contain;
   z-index: 100;
   transform: translateY(70px);
-  border: 1px solid blue;
+
+  // border: 1px solid blue;
 }
 
 .shadow-clock {
@@ -74,7 +79,8 @@ body {
 .min-hand {
   display: flex;
   margin-top: -20px;
-  border: 1px solid red;
+
+  // border: 1px solid red;
 
   img {
     width: 11px;
@@ -100,6 +106,34 @@ body {
     transform-origin: bottom center;
     position: absolute;
   }
+}
+
+.icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-image: url(../images/sprite.svg);
+  width: 34px;
+  height: 32px;
+  padding: 20px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.icon-volume-high {
+  width: 34px;
+  height: 32px;
+  background-position: 0 0;
+  cursor: pointer;
+}
+
+.icon-volume-mute {
+  width: 32px;
+  height: 32px;
+  background-position: -48px 0;
+  display: none;
 }
 
 @import "js";

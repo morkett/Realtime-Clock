@@ -17,3 +17,17 @@ function moveHands() {
 
 
 window.onload = moveHands;
+
+
+$(document).ready(function() {
+  $(".icon-volume-high").click(function(){
+    $(this).css("display", "none");
+    $(audio).muted = true;
+    $(".icon-volume-mute").css("display", "block");
+});
+
+$(".icon-volume-mute").click(function(){
+  $(this).css("display", "none");
+  $(".icon-volume-high").css("display", "block");
+});
+});

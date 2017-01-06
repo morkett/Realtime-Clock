@@ -2,11 +2,12 @@
 <html lang="en">
 
   <head>
-    <title></title>
+    <title>Ticking Realtime Clock</title>
 
       <!-- META DATA -->
       <meta http-equiv="content-type" content="text/html; charset=utf-8">
-      <meta name="description" content="" />
+      <meta name="description" content="Realtime Clock, utilising JS to detect users current time and display live. 
+" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
       <!-- FAVICON -->
       <link type="text/css" rel="stylesheet" href="stylesheets/styles.css" />
@@ -34,8 +35,12 @@
 
         <div class="shadow-clock"></div>
 
-        <audio src="assets/clock-ticking.mp3"  autoplay loop></audio>
+        <audio src="assets/clock-ticking.mp3"  autoplay loop class="audio" id="audio"></audio>
+        <span class="icon icon-volume-high"></span>
+        <span class="icon icon-volume-mute" onclick="document.getElementById('audio').muted = false;"></span>
+
     </div>
+
   </div>
   </body>
 </html>
