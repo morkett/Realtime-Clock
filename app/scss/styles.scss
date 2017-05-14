@@ -134,7 +134,9 @@ body {
   width: 32px;
   height: 32px;
   background-position: -48px 0;
-  display: none;
 }
 
-@import "js";
+* {
+  outline: none;
+    border: 0;
+}
